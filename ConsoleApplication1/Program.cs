@@ -45,7 +45,7 @@ namespace ConsoleApplication1
         static string filename = "record.wav";
         static void SaveToWaveFile(byte[] sounddata)
         {
-                var newFormat = new WaveFormat(16000, 16, 1); //改成2會有特效
+                var newFormat = new WaveFormat(16000, 16, 1); //最後一個參數改成 2 會有聲音特效
                 using (WaveFileWriter wfw = new WaveFileWriter(filename, newFormat))
                 {
                     wfw.Write(sounddata, 0, sounddata.Length);
